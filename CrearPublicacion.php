@@ -19,15 +19,13 @@
   	<div style="margin: auto; width: 800px; border-collapse: separate; border-spacing: 10px 5px;">
   		<span> <h1>Registrar usuario</h1> </span>
   		<br>
-	  <form action="Crear.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
+	  <form action="InsertarPublicacion.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
   		
   		<input type="hidden" id="ID" name="ID"><br>
-		  
+		 
 		  <label>Titulo: </label>
   		<input type="text" id="Titulo" name="Titulo"><br>
   		
-
-
 		  <label>Contenido: </label>
   		<input type="text" id="Contenido" name="Contenido"><br>
   

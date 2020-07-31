@@ -1,10 +1,13 @@
 <?php
 	include 'conexion.php';
-
+session_start();
 	NuevoPokemon($_POST['ID'], $_POST['Foto'], $_POST['Nombre'], $_POST['Correo'], $_POST['NombreU'], $_POST['Contraseña'] , $_POST['Apellido']);
 
 	function NuevoPokemon($ID, $Foto, $Nombre,$Correo,$NombreU,$Contraseña,$Apellido)
 	{
+        
+
+$_SESSION["Nombre"]=$Nombre;
 		$servidor = "localhost:3307";
 		$usuario = "root";
                 $conexion = mysqli_connect( $servidor, $usuario, "","sistema" );

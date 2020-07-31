@@ -12,7 +12,7 @@
      if ($row[0]=="1") {      
       
         
-        header('Location: index.php');
+        header('Location: index.php?nombre=".$_POST["Nombre"]."');
      }else{
         
         header('Location: login.php');

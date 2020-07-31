@@ -1,3 +1,27 @@
+<?php
+  include "conexion.php";
+ $nombre =$_POST['Nombre'];
+
+
+
+
+
+ $resultado=$conexion->query("SELECT EXISTS (SELECT * FROM usuario WHERE nombreU='$nombre');");
+ $row=mysqli_fetch_row($resultado);
+ 
+     if ($row[0]=="1") {      
+      
+        
+        
+     }else{
+        
+        header('Location: login.php');
+     }   
+
+
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,11 +50,13 @@
   		</thead>
   		
   		
-  		<?php
-      include "conexion.php";
-      $sentencia="SELECT * FROM usuario as A
-      INNER JOIN publicacion as B
-          ON (A.nombreU = B.nombre)";
+          <?php
+          
+     
+      
+      $sentencia="SELECT * FROM publicacion where nombre = '".$nombre."' ";
+      
+          
       $resultado=mysqli_query($conexion,$sentencia);
       
       while($filas=mysqli_fetch_array($resultado))

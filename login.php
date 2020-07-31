@@ -12,7 +12,7 @@
 </head>
 <body>
 <?php echo '<a href="CrearUsuario.php">Crear Usuario Nuevo</a>';?>
-<form action="ComprobarExistencia.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
+<form action="index.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
   		
 
 		  
