@@ -95,7 +95,7 @@
           echo "<td>"; echo $filas['contenido']; echo "</td>";
           echo "<td>"; echo $filas['fecha']; echo "</td>";
           
-          echo "<td>  <a href='modP1.php?ID=".$filas['ID']."'> <button type='button' class='btn btn-success'>Modificar</button> </a> </td>";
+          echo "<td>  <a href='ModificarPublicacion.php?ID=".$filas['ID']."'> <button type='button' class='btn btn-success'>Modificar</button> </a> </td>";
           echo "<td> <a href='EliminarPublicacion.php?ID=".$filas['ID']."''><button type='button' class='btn btn-danger'>Eliminar</button></a> </td>";
         echo "</tr>";
       }
