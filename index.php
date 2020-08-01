@@ -18,7 +18,8 @@
         header('Location: login.php');
      }   
 
-
+     $date = date('d-m-Y');
+     echo $date;
 
 
 ?>
@@ -35,6 +36,32 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body background="fondo.jpg">
+
+
+<form action="InsertarPublicacion.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
+  		
+  		<input type="hidden" id="ID" name="ID"><br>
+		  <input type="hidden" id="Nombre" name="Nombre" value = "<?php echo htmlspecialchars($nombre); ?>"><br>
+		  <label>Titulo: </label>
+  		<input type="text" id="Titulo" name="Titulo"><br>
+  		
+		  <label>Contenido: </label>
+  		<input type="text" id="Contenido" name="Contenido"><br>
+  
+  		<button type="submit" class="btn btn-success">Guardar</button>
+     </form>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="todo">
   
   <div id="contenido">
@@ -69,7 +96,7 @@
           echo "<td>"; echo $filas['fecha']; echo "</td>";
           
           echo "<td>  <a href='modP1.php?ID=".$filas['ID']."'> <button type='button' class='btn btn-success'>Modificar</button> </a> </td>";
-          echo "<td> <a href='eliminarP.php?ID=".$filas['ID']."''><button type='button' class='btn btn-danger'>Eliminar</button></a> </td>";
+          echo "<td> <a href='EliminarPublicacion.php?ID=".$filas['ID']."''><button type='button' class='btn btn-danger'>Eliminar</button></a> </td>";
         echo "</tr>";
       }
 

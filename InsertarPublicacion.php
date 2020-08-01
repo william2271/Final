@@ -8,7 +8,7 @@
 		$servidor = "localhost:3307";
 		$usuario = "root";
                 $conexion = mysqli_connect( $servidor, $usuario, "","sistema" );
-                $date = date('d-m-Y H:i:s');
+                $date = date('Y-m-d');
          
 		 $sentencia="INSERT INTO publicacion (ID, titulo,contenido,fecha,nombre) VALUES ('".$ID."', '".$Titulo."', '".$Contenido."','".$date."','".$Nombre."')";
 		mysqli_query($conexion,$sentencia);
@@ -24,6 +24,6 @@
 ?>
 
 <script type="text/javascript">
-	alert("Usuario Ingresado exitosamente");
+	alert("Publicacion Ingresado exitosamente");
 	window.location.href='index.php';
 </script>
