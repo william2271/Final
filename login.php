@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body>
+<body  style="background-color:grey;">
 <?php echo '<a href="CrearUsuario.php">Crear Usuario Nuevo</a>';?>
 <form action="index.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
   		

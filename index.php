@@ -1,12 +1,12 @@
 <?php
   include "conexion.php";
  $nombre =$_POST['Nombre'];
+$contraseña = $_POST['Contraseña'];
 
 
 
 
-
- $resultado=$conexion->query("SELECT EXISTS (SELECT * FROM usuario WHERE nombreU='$nombre');");
+ $resultado=$conexion->query("SELECT EXISTS (SELECT * FROM usuario WHERE nombreU='$nombre' AND contraseña ='$contraseña') ;");
  $row=mysqli_fetch_row($resultado);
  
      if ($row[0]=="1") {      
@@ -18,9 +18,7 @@
         header('Location: login.php');
      }   
 
-     $date = date('d-m-Y');
-     echo $date;
-
+    
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +33,7 @@
 <span> <h1 align ="Center">Publicaciones:</h1> </span>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
-<body background="fondo.jpg">
+<body style="background-color:grey;">
 
 
 <form action="InsertarPublicacion.php" method="POST" style="border-collapse: separate; border-spacing: 10px 5px;">
@@ -68,11 +66,11 @@
 
   	<table class="table table-dark" style="margin: auto; width: 800px; border-collapse: separate; border-spacing: 10px 5px;">
   		<thead>
-  			<th>ID.</th>
+  			
   			<th>Titulo</th>
   			<th>Contenido</th>
         <th>Fecha</th>
-        <th> <a href="CrearPublicacion.php"> <button type="button" class="btn btn-info">Nueva Publicacion</button> </a> </th>
+        
         
   		</thead>
   		
@@ -89,7 +87,7 @@
       while($filas=mysqli_fetch_array($resultado))
       {
         echo "<tr>";
-          echo "<td>"; echo $filas['ID']; echo "</td>";
+       
          
           echo "<td>"; echo $filas['titulo']; echo "</td>";
           echo "<td>"; echo $filas['contenido']; echo "</td>";

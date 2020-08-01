@@ -39,7 +39,7 @@ $usuario = "root";
 <title>Modificar publicacion</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
-<body background="fondo.jpg">
+<body style="background-color:grey;">
 
 
 <div id="contenido">
